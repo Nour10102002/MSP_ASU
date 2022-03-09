@@ -4,56 +4,206 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Nunito+Sans:wght@300;600;800&family=Outfit:wght@300;400;600&family=Poppins:wght@100;200;400;500;600;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style/speakers.css">
-    <title>Speakers | MSP ASU</title>
+    <link rel="stylesheet" href="style/contactUs.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | MSP</title>
 </head>
 
 <body>
-    <div class="container-of-cards">
-        <div class="container-card">
-            <div class="container-image">
-                <div class="image">
-                    <img class="photo" src="man.jpg" alt="">
-                </div>
+    <div class="container">
+        <form action="">
+
+            <div class="qrCodeWindow">
+                <h3>Scan QR Code</h3>
+                <img class="qrCode-image" width="150" alt='QR Code' />
+                <span onclick="document.querySelector('.qrCodeWindow').style.display = 'none'">Close</span>
             </div>
-            <div class="container-details">
-                <h1 class="name">Christopher Kenneth</h1>
-                <p class="job-title">Web Developer</p>
-                <div class="vertical-line"></div>
-                <p class="about-speaker">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem in veritatis dolorum quaerat
-                    eaque quae, sunt expedita nisi aut porro totam recusandae. Eos voluptas dignissimos, harum ea
-                    tempora illum illo.
-                </p>
-                <div class="vertical-line"></div>
-                <div class="row">
-                    <a href="#" class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#f20000"
-                            class="bi bi-youtube" viewBox="0 0 16 16">
-                            <path
-                                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
-                        </svg>
-                    </a>
-                    <hr>
-                    <a href="#" class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0071ae"
-                            class="bi bi-linkedin" viewBox="0 0 16 16">
-                            <path
-                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-                        </svg>
-                    </a>
+
+
+
+            <div class="logo"><img src="photo/MSPLogo.png" alt=""></div>
+
+
+
+            <div class="show-qrCode" onclick="document.querySelector('.allQRcodes').style.left = 0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="allQRcodes">
+                <svg onclick="document.querySelector('.allQRcodes').style.left = '-100%'"
+                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-x-circle"
+                    viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+
+                <div class="image-slider-container">
+                    <svg onclick="previousSilde()" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
+                        class="bi bi-chevron-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                    </svg>
+                    <div class="cards-container">
+                        <div class="cards-slide">
+
+                            <div class="qrCode-container">
+                                <p>Facebook</p>
+                                <img src="https://www.unitag.io/qreator/generate?crs=Ppv8rOENN3V1lAwTz82zPjZwLeh11CXT8n%252BHMzWMdvUb%252BsqQ%252Foeme7xO4uqEGrEiWXSFsLOZjD0p0af8Oe4JUujrLgxVVfT89%252BGD2g4vFdKZQuP4Fdgab3F2t1Q5SyqVGgU2k2MHaM6r8y%252BsvtU%252F91WamBHQdpDNxkqpcgUiXtGoph66OIEN2tiZCLQX%252BflsPMSfuS%252BmwpJgwkAB14BBMdUO32Hwbx2DQBSFmNC4RhgmL6W4%252BEeixK0%252FwC7Ce8WE7gTIx0XVZwvUMrCILDmre0DFFyx%252Fx7jhUophCXnAe0xedR%252BWYL3khS%252Be19lej6vo&crd=fhOysE0g3Bah%252BuqXA7NPQ87MoHrnzb%252BauJLKoOEbJsqu%252BsMYoR%252FmkCVF6t9QFzo15HYOuvaxz1WyMPsWo0pb6A%253D%253D"
+                                    width="160" alt='QR Code' />
+                            </div>
+
+                            <div class="qrCode-container">
+                                <p>LinkedIn</p>
+                                <img src="https://www.unitag.io/qreator/generate?crs=Ppv8rOENN3V1lAwTz82zPjZwLeh11CXT8n%252BHMzWMdvUb%252BsqQ%252Foeme7xO4uqEGrEiWXSFsLOZjD0p0af8Oe4JUujrLgxVVfT89%252BGD2g4vFdKZQuP4Fdgab3F2t1Q5SyqVAKxBAM%252Fu7kV9E28Zhu5m8Uk6%252B%252FTe0LUTdqPNGCzpps7JW1xbuyL4%252FEnsJXZL6otJORTmsRxJws8FLFIZXWcsgXbo%252FQNHcWOi7ZTcbacpDd5B5qxbQDZdtP4H3tpigPB3o4ta5RwhI8gJqFdXEo0SPVfW4BF61YmbPLOaH9nNGJG9pJHiV61KsCm2DQ6dMTyS&crd=fhOysE0g3Bah%252BuqXA7NPQ87MoHrnzb%252BauJLKoOEbJsqKZv3U1GgktgNBUZQqyqIlBMZ2x%252FnlJyw3B%252BvceBbgBw%253D%253D"
+                                    width="160" alt='QR Code' />
+                            </div>
+
+                            <div class="qrCode-container">
+                                <p>YouTube</p>
+                                <img src="https://www.unitag.io/qreator/generate?crs=m9mHWQDvgwWuO19IqjamCz7BBs0IV4Ma6TP5cqQ65b48c2ONU%252FFqLNMOwVkb0vT%252Bi2qjGfDkSZ07ef%252FlO%252B8Zj5DDjXgVldtfuxZ9VKXfRWexri0v8fesl94rVqKpuDX6MVJh%252F1CazQ50nEI8koBIy%252FqOYQ8OVOYHMB4zrVAtMnLuYp2XC7oVUk5DKi1bsULQPJNkpamNrYGl%252Ft%252FaaVVwkNZtl2NBMi7Gu%252BDgHL7rCh6rQsqnbrvMyAjJHMPEdW4b9507BppbuL%252BH0Xckkk7jpLfhcT4x8Hap%252BWOTg4tcetBEEHC8%252B3D9wm9DDGFCAUtzTUplvHwQsMPNsmkyW9koaXJjLaLnEhdnRjS%252FpENkiDgXp3u84fgU1wb5uNQMiiZMp6mtd6z9u5ejkpdMHseOYydYU%252BR0X%252FGO%252FSbC1qAcc22VIFJkX4r5eYcGP8bzz6bBxiGmNyy%252FZ1O%252FbqnuRo2nqEdbthcwqOo9HY8u3RK6Tl4%253D&crd=fhOysE0g3Bah%252BuqXA7NPQ87MoHrnzb%252BauJLKoOEbJspqIr%252Byj3kuiVRP1EyXgvybHa1gEbX6mvxjnpp2BvD2Wg%253D%253D"
+                                    width="160" alt='QR Code' />
+                            </div>
+
+                            <div class="qrCode-container">
+                                <p>Instagram</p>
+                                <img src="https://www.unitag.io/qreator/generate?crs=Ppv8rOENN3V1lAwTz82zPjZwLeh11CXT8n%252BHMzWMdvUb%252BsqQ%252Foeme7xO4uqEGrEiWXSFsLOZjD0p0af8Oe4JUujrLgxVVfT89%252BGD2g4vFdK4KfHogEW3eFdy1nG7J9xP2zmR5o6Xg7U8kBsNvOTThm9IXLjTZnj4CrEVuI4xH4zf99Z0h%252FHeexnuiIZsEeFoo5OoBYxFlpN27JvJDrWGMRCHgH9ErdpU3Eaaarr6tXYr8Zl6dSzHYpFkJkzRyiBhDcAkT2X0CkegdlZ3P3Ha%252FZRd6gsaupzVvP607zZOt5wka6rtpQraVVHhGQ%252BAyTqUlW%252BGWaB%252FUPpmC4oM02AVvwgFvEZFaeWwaUUZWXtvX0c%253D&crd=fhOysE0g3Bah%252BuqXA7NPQ87MoHrnzb%252BauJLKoOEbJspG0vX6eqcFpUE6UplWXQiDepzVKDlaOSTVaL4i0VwnqA%253D%253D"
+                                    width="160" alt='QR Code' />
+                            </div>
+
+                            <div class="qrCode-container">
+                                <p>Twitter</p>
+                                <img src="twitter" width="160" alt='QR Code' />
+                            </div>
+                        </div>
+                    </div>
+                    <svg onclick="nextSilde()" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
+                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+
                 </div>
 
             </div>
+
+            <div class="content">
+                <h1>Contact Us</h1>
+                <p>Feel free to contact us any time. We will get back to you as soon as we can.</p>
+                <input type="text" name="" id="" placeholder="Name">
+                <input type="email" name="" id="" placeholder="Email">
+                <textarea name="" id="" cols="30" rows="1" placeholder="Message"></textarea>
+                <button type="submit">SEND</button>
+            </div>
+        </form>
+        <div class="colord-side">
+            <div class="informations">
+                <div class="informations-container">
+                    <h2>Info</h2>
+                    <p>Scan QR-Code</p>
+
+
+
+                    <div class="qrCodeContainer">
+                        <a href="https://www.facebook.com/ASUTC" class="qrCode">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                            </svg>
+                            <p>Facebook</p>
+                        </a>
+                        <span onclick="showQr_code('facebook')">Scan.</span>
+                    </div>
+
+
+                    <div class="qrCodeContainer">
+                        <a href="https://www.linkedin.com/company/msp-tech-club-asu22/" class="qrCode">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                            </svg>
+                            <p>LinkedIn</p>
+                        </a>
+                        <span onclick="showQr_code('linkedin')">Scan.</span>
+                    </div>
+
+
+
+                    <div class="qrCodeContainer">
+                        <a href="https://www.youtube.com/channel/UCx4RR5PPCwfU_Om_9pAwaCA" class="qrCode">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-youtube" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                            </svg>
+                            <p>YouTube</p>
+                        </a>
+                        <span onclick="showQr_code('youtube')">Scan.</span>
+                    </div>
+
+
+                    <div class="qrCodeContainer">
+                        <a href="https://www.instagram.com/msp_asu/" class="qrCode">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                            </svg>
+                            <p>Instagram</p>
+                        </a>
+                        <span onclick="showQr_code('instagram')">Scan.</span>
+                    </div>
+
+
+                    <div class="qrCodeContainer">
+                        <a href="#" class="qrCode">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-twitter" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                            </svg>
+                            <p>Twitter</p>
+                        </a>
+                        <span onclick="showQr_code('twitter')">Scan.</span>
+                    </div>
+
+
+
+                    <div class="qrCodeContainer">
+                        <a href="msp.asu22@gmail.com" class="qrCode">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-google" viewBox="0 0 16 16">
+                                <path
+                                    d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
+                            </svg>
+                            <p>Gmail</p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="location">
+                <svg onclick="window.open('https://goo.gl/maps/dhFz5bF6BB9DkYeF7')" xmlns="http://www.w3.org/2000/svg"
+                    width="18" height="18" fill="black" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                    <path
+                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                </svg>
+                <a href="https://goo.gl/maps/dhFz5bF6BB9DkYeF7">FCIS-ASU Location</a>
+            </div>
         </div>
     </div>
-    <script src="main.js"></script>
+    <script src="JSFiles/main.js"></script>
 </body>
 
 </html>
