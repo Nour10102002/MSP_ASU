@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+:root {
+    --mainColor: #019be5;
+    --padding: 15px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: gray;
+}
+
+.container {
+    display: flex;
+    overflow: hidden;
+}
+
+form {
+    background-color: white;
+    width: 600px;
+    height: 440px;
+    padding: 30px;
+    position: relative;
+}
+
+form .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+}
+
+form .logo img {
+    width: 50px;
+}
+
+.show-qrCode {
+    width: 40px;
+    height: 40px;
+    background-color: var(--mainColor);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.show-qrCode > span {
+    position: relative;
+    height: 2px;
+    width: 50%;
+    background-color: white;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding-left: 14%;
+}
+
+.content h1 {
+    padding-left: 5px;
+}
+
+.content p {
+    color: gray;
+    font-size: 12px;
+    padding: 15px 0;
+}
+
+.content input , 
+.content textarea{
+    padding: 10px;
+    margin-bottom: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid gray;
+}
+
+.content input::placeholder , 
+.content textarea::placeholder {
+    font-size: 12px;
+}
+
+.content textarea {
+    resize: none;
+}
+
+.content input:focus , 
+.content textarea:focus {
+    outline: none;
+}
+
+.content button {
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+}
+
+.content button:active {
+    transform: scale(0.98);
+}
+
+.colord-side {
+    background-color: var(--mainColor);
+    width: 150px;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.colord-side::after {
+    content: "";
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    position: absolute;
+}
+
+.colord-side::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: var(--mainColor);
+    position: absolute;
+    top: 13%;
+    left: -110%;
+    z-index: 1;
+}
+
+.informations > * {
+    color: white;
+    position: absolute;
+    z-index: 1;
+    top: 23%;
+    left: -80%;
+}
+
+.informations-container > p {
+    color: gray;
+}
+
+.qrCodeContainer {
+    display: flex;
+    align-items: center;
+}
+
+.qrCode {
+    display: flex;
+    margin: 7px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.qrCode:hover > *:not(span){
+    transition: 0.5s;
+    color: var(--mainColor);
+    text-decoration: underline var(--mainColor);
+}
+
+.qrCode svg {
+    margin-right: 10px;
+}
+
+.qrCode + span {
+    margin-left: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.colord-side > .location {
+    cursor: pointer;
+    position: absolute;
+    color: white;
+    z-index: 1;
+    bottom: 10px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colord-side > .location svg {
+    margin: 5px;
+}
+
+.colord-side > .location a {
+    font-size: 11px;
+    font-weight: 100;
+    color: black;
+    text-decoration: none;
+}
+
+.colord-side > .location a:hover {
+    text-decoration: underline;
+}
+
+.qrCodeWindow {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: linear-gradient(45deg , var(--mainColor), black );
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 0 10px black;
+    display: none;
+}
+
+.qrCodeWindow h3 {
+    color: white;
+}
+
+
+.qrCodeWindow span {
+    padding: 5px 20px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.qrCodeWindow span:active {
+    transform: scale(0.96);
+}
+
+form .allQRcodes {
+    background-color: var(--mainColor);
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    left: 0;
+    z-index: 1;
+    transition: 2s;
+    overflow: hidden;
+    box-shadow: 0 0 15px black;
+}
+
+.allQRcodes svg.bi-x-circle {
+    position: absolute;
+    right: 0;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.image-slider-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 200px;
+}
+
+
+
+.cards-slide {
+    width: 150px;
+    height: 100%;
+    position: absolute;
+    left: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.bi-chevron-left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    background-color: black;
+    height: 40px;
+}
+
+.bi-chevron-right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    background-color: black;
+    height: 40px;
+}
+
+.qrCode-container {
+    /* margin-right: 25px; */
+    position: relative;
+}
+
+.qrCode-container p {
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.qrCode-container img {
+    border-radius: 10px;
+}
+
+@media (max-width: 769px) {
+    form {
+        width: 400px;
+    }
+
+    .colord-side {
+        width: 90px;
+    }
+
+    .colord-side::after {
+        width: 140px;
+    }
+
+    .informations > * {
+        left: -40%;
+    }
+
+    .colord-side::before {
+        top: 13%;
+        left: -70%;
+    }
+
+    .content {
+        width: 290px;
+        padding-left: 8%;
+    }
+
+    .qrCode + span {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 499px) {
+
+    form {
+        width: 250px;
+    }
+
+    .content {
+        width: 200px;
+        padding-left: 0;
+        padding-top: 8%;
+    }
+
+    .colord-side {
+        width: 40px;
+        /* display: none; */
+    }
+
+    .colord-side::after {
+        width: 150px;
+        display: none;
+    }
+
+    .colord-side::before {
+        top: 13%;
+        left: -80%;
+        display: none;
+    }
+
+    .informations > * {
+        left: -40%;
+    }
+
+
+
+    .show-qrCode {
+        width: 20px;
+        height: 30px;
+    }
+
+    .informations-container > h2,
+    .informations-container > p ,
+    .qrCode > p {
+        display: none;
+    }
+
+    .qrCode > svg {
+        margin-left: 15px;
+        fill: black;
+    }
+
+    .location a {
+        display: none;
+    }
+
+    .location svg {
+        width: 30px;
+    }
+    
+    .qrCode + span {
+        display: none;
+    }
+}
