@@ -385,7 +385,7 @@ form .allQRcodes {
     .content {
         width: 80%;
         position: absolute;
-        left: 50%;
+        left: 45%;
         transform: translateX(-50%);
     }
 
